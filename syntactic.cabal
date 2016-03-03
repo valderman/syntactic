@@ -66,7 +66,7 @@ library
     Language.Syntactic.Sugar.BindingTyped
     Language.Syntactic.Sugar.Monad
     Language.Syntactic.Sugar.MonadTyped
-  if flag(th)
+  if flag(th) && !impl(haste)
     exposed-modules:
       Language.Syntactic.TH
       Language.Syntactic.Functional.Tuple
@@ -92,7 +92,7 @@ library
   if impl(ghc < 7.8)
     build-depends: tagged
 
-  if flag(th)
+  if flag(th) && !impl(haste)
     build-depends: template-haskell
 
   hs-source-dirs: src
