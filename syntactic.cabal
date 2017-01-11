@@ -84,7 +84,7 @@ library
     deepseq,
     mtl >= 2 && < 3,
     syb,
-    tree-view
+    tree-view < 0.5
 
   if impl(ghc < 7.10)
     build-depends: base-orphans
